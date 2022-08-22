@@ -29,7 +29,4 @@ urlpatterns = [
     path('process', views.process, name='Process'),
     path('add', views.add, name='Addition'),
     path('database', views.database, name='Database'),
-
-    url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
-    url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
 ]
