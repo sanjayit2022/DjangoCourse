@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+
+    <!-- The table style-->
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+
+        th {
+          background-color: #07E5B9;
+        }
+
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<h2>Employee table has the following records:</h2><br>
+
+<table>
+    <tr>
+        <th>Emp Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Designation</th>
+        <th>Joining Date</th>
+    </tr>
+
+    {% for emp in employees %}
+        <tr>
+            <td>AutoField</td>
+            <td>{{ emp.empName }}</td>
+            <td>{{ emp.empSalary }}</td>
+            <td>{{ emp.empDes }}</td>
+            <td>{{ emp.empDOJ|date:"d-m-Y h:i:s A" }}</td>
+            <!-- OR <td>{{ emp.toStrDate }}</td> - calling method of emp object and use return value -->
+        </tr>
+    {% endfor %}
+
+
+</table>
+
+
+</body>
+</html>
