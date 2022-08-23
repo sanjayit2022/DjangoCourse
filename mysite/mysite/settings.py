@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'mysite'
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://djangocourse-sm.herokuapp.com']
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
